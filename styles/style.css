@@ -35,6 +35,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   font-size: calc(1.4rem + 0.1vw);
+  /* font-size: calc(.6rem + 1vw); */
   line-height: 26px;
   letter-spacing: 0.2px;
   color: #201E21;
@@ -62,6 +63,41 @@ ul { list-style: none }
 img {
   width: 100%;
   display: block;
+}
+
+/* 
+------------------------------------- TYPOGRAPHY
+*/
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'East Sea Dokdo', sans-serif;
+  font-weight: 400;
+  line-height: .55;
+}
+
+h1 { font-size: 12.2rem }
+
+h2 {
+  font-size: 7.5rem;
+  font-size: calc(6.4rem + 1vw);
+  margin-bottom: 1.4rem;
+  line-height: 56px;
+}
+
+h3 {
+  font-size: 5.5rem;
+  font-size: calc(5.2rem + .1vw);
+  margin-top: 1rem;
+  line-height: 36px;
+  text-align: center;
+}
+
+h4 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
 }
 
 /* 
@@ -93,41 +129,6 @@ img {
 
 .btn-blue { background-color: #0178A5 }
 .btn-purple { background-color: #A7059B }
-
-
-/* 
-------------------------------------- TYPOGRAPHY
-*/
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'East Sea Dokdo', sans-serif;
-  font-weight: 400;
-}
-
-h1 { font-size: 12.2rem }
-
-h2 {
-  font-size: 7.5rem;
-  font-size: calc(7rem + .1vw);
-  margin-bottom: 1.4rem;
-  line-height: 36px;
-}
-
-h3 {
-  font-size: 5.5rem;
-  font-size: calc(5.2rem + .1vw);
-  margin-top: 1rem;
-  line-height: 36px;
-  text-align: center;
-}
-
-h4 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
 
 /* 
 ========================================================== HEADER SECTION
@@ -207,6 +208,7 @@ header h1 {
 ------------------------------------- MAIN > EXHIBITIONS SECTION
 */
 
+/* TODO center the paintings */
 .exhibitions {
   padding: 8rem 0 10rem;
   background-color: #F7DAE8;
@@ -326,6 +328,7 @@ header h1 {
   width: 75%;
   border: none;
   padding: 1.7rem 0 1.7rem 2.8rem;
+  padding: calc(1.7rem + .1vw) 0 calc(1.7rem + .1vw) 2.8rem;
 }
 
 .subscribe input::placeholder { color: #201E21 }
@@ -353,18 +356,10 @@ footer a {
   text-decoration: underline;
 }
 
+/* ============================================== MEDIA QUERIES ============================================== */
 
 
-
-
-
-/* 
-========================================================== MEDIA QUERIES
-*/
-
-/* 
-------------------------------------- MAX WIDTH: 1024PX
-*/
+/* ------------------------------------------------------- MAX WIDTH: 1024PX */
 
 @media (max-width: 1024px) {
   body {
@@ -379,40 +374,60 @@ footer a {
   .new-product-content { width: calc(100% / 3 * 2 - 2rem) }
 
 
-/* 
--------------- MAIN > BLOG SECTION
-*/
+/* --------------1024px MAIN > BLOG SECTION */
 
   .blog-post {
     padding-top: 4rem;
   }
 
+  .blog-post p { margin: 1.5rem 0 1rem }
+
   .blog-container:nth-of-type(odd) .blog-post { padding-right: 4rem }
   .blog-container:nth-of-type(even) .blog-post { padding-left: 4rem }
 }
 
-/* 
-------------------------------------- MAX WIDTH: 768PX
-*/
+/* --------------1024px MAIN > CONTACT SECTION */
+
+  .subscribe input { width: 70% }
+  .subscribe button { width: 30% }
+
+
+/* ------------------------------------------------------- MAX WIDTH: 768PX */
 
 @media (max-width: 768px) {
-/* 
--------------- MAIN > EXHIBITIONS SECTION
-*/
 
-  .exhibitions li {
-    width: calc((100% - 2rem) / 2);
-    /* float: left; */
+  /* --------------768px MAIN > NEW-PRODUCT SECTION */
+  .new-product-img-container,
+  .new-product-content {
+    width: 100%;
   }
 
-  .exhibitions li:nth-of-type(2n) { margin: 0 0 0 2rem }
-
-  .exhibitions li:nth-of-type(3) {
-    display: none;
+  .new-product img {
+    max-height: 250px;
+    object-fit: cover;
+    object-position: top;
   }
 
+  .new-product-content h2 {
+    margin-top: 4rem;
+  }
+
+  /* TODO Come back and figure out another method of centering the button */
+  .new-product-content .btn { 
+    margin-top: 1rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* --------------768px MAIN > EXHIBITIONS SECTION */
+  .exhibitions { padding: 5.2rem 0 8rem }
+  .exhibitions li { width: calc((100% - 4rem) / 3); }
+
+  .exhibitions li:nth-of-type(2n) { margin: 0 2rem }
+
+
 /* 
--------------- MAIN > BLOG SECTION
+--------------768px MAIN > BLOG SECTION
 */
 
   .blog {
@@ -430,18 +445,19 @@ footer a {
     object-fit: cover;
   }
 
-  .blog-post { padding: 4rem 0; }
+  .blog-container:nth-of-type(odd) .blog-post,
+  .blog-container:nth-of-type(even) .blog-post { padding: 4rem 0 }
+  
   .blog-post p { margin-bottom: 1.8rem }
-
 /* 
--------------- MAIN > CONTACT SECTION
+--------------768px MAIN > CONTACT SECTION
 */
   .contact { 
     padding: 4rem 0;
     text-align: center;
   }
 
-  .contact h3 { margin: 2rem 0 }
+  .subscribe h3 { margin: 2rem 0 1.5rem }
 
   .contact nav,
   .subscribe,
@@ -462,6 +478,11 @@ footer a {
 
   /* .subscribe h3 { margin: 0 } */
 
+  .subscribe form {
+    width: 75%;
+    margin: 0 auto 2rem;
+  }
+
   .contact-details { text-align: center;}
   .contact li:not(:last-child) { margin-bottom: 0 }
 
@@ -469,18 +490,49 @@ footer a {
 }
 
 /* 
-------------------------------------- MAX WIDTH: 480PX
+------------------------------------------------------- MAX WIDTH: 480PX
 */
 
 @media (max-width: 480px) {
-/* 
--------------- MAIN > FEATURE SECTION
-*/
-  
+
+.btn { 
+  font-size: calc(3.6rem + 1vw) ;
+  padding: 0 calc(3rem + .1vw);
+}
+
+/* --------------480px MAIN > EXHIBITIONS SECTION */
+
+  .exhibitions li {
+    width: calc((100% - 2rem) / 2);
+  }
+
+  .exhibitions li:nth-of-type(2n) { margin: 0 0 0 2rem }
+
+  .exhibitions li:nth-of-type(3) {
+    display: none;
+  }
+
+
+/* --------------480px MAIN > FEATURE SECTION */
+  .features { padding: 6rem 0 }
+
   .feature-container {
     width: calc(100%);
     float: none;
   }
 
-  .feature-container:not(:last-child) { margin-bottom: 2rem }
+  .feature-container:not(:last-child) { margin-bottom: 4rem }
+
+  .subscribe { margin-bottom: 3rem; }
+  .subscribe form > * { float: none; }
+
+  .subscribe input {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .subscribe button { width: auto }
+
 }
