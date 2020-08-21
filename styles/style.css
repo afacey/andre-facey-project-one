@@ -107,6 +107,7 @@ h4 {
   color: #fff;
   font-family: 'East Sea Dokdo';
   font-size: 3.6rem;
+  /* font-size: calc(3.6rem + 1vw); */
   font-weight: 400;
   transition: border 0.3s ease;
 }
@@ -366,6 +367,7 @@ footer a {
 
 @media (max-width: 768px) {
 
+  .btn { font-size: calc(3.6rem + 1vw); }
 /* --------------768px MAIN > NEW-PRODUCT SECTION */
   .new-product-img-container,
   .new-product-content {
@@ -450,6 +452,8 @@ footer a {
     margin: 0 auto 2rem;
   }
 
+  .subscribe input { padding: calc(1.5rem + 1vw) 0 calc(1.5rem + 1vw) 2.8rem }
+
   .contact-details { text-align: center;}
   .contact li:not(:last-child) { margin-bottom: 0 }
 
@@ -493,6 +497,8 @@ footer a {
 
   .subscribe { margin-bottom: 3rem; }
   .subscribe form > * { float: none; }
+
+  .subscribe form { width: 100%; }
 
   .subscribe input {
     width: 100%;
