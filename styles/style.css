@@ -8,16 +8,11 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-/* 
-========================================================== ^ END OF NORMALISE
-*/
+/* ======================================================================== ^ END OF NORMALISE */
 
-/* 
-========================================================== GENERAL STYLES
-*/
+/* ========================================================== GENERAL STYLES */
 
-/* 
-------------------------------------- COLORS
+/* ------------------------------------- COLORS
 DARK - #201E21
 OCEAN BLUE - #0178A5
 BARNEY PURPLE - #A7059B
@@ -25,9 +20,7 @@ VERY LIGHT PINK - #FFE9E9
 LIGHT PINK - #F7DAE8
 */
 
-/* 
-------------------------------------- ELEMENTS
-*/
+/* ------------------------------------- ELEMENTS */
 
 html { font-size: 62.5% }
 
@@ -65,9 +58,7 @@ img {
   display: block;
 }
 
-/* 
-------------------------------------- TYPOGRAPHY
-*/
+/* ------------------------------------- TYPOGRAPHY */
 
 h1,
 h2,
@@ -89,7 +80,8 @@ h2 {
 
 h3 {
   font-size: 5.5rem;
-  font-size: calc(5.2rem + .1vw);
+  /* font-size: calc(5.2rem + .1vw); */
+  font-size: calc(3.6rem + 1vw);
   margin-top: 1rem;
   line-height: 36px;
   text-align: center;
@@ -100,9 +92,7 @@ h4 {
   margin-bottom: 1rem;
 }
 
-/* 
-------------------------------------- CLASSES
-*/
+/* ------------------------------------- CLASSES */
 
 .wrapper {
   max-width: 1200px;
@@ -130,9 +120,7 @@ h4 {
 .btn-blue { background-color: #0178A5 }
 .btn-purple { background-color: #A7059B }
 
-/* 
-========================================================== HEADER SECTION
-*/
+/* ========================================================== HEADER SECTION */
 
 header {
   background-image: url(../assets/group-4@2x.png);
@@ -177,14 +165,10 @@ header h1 {
   transform: translateY(-50%);
 }
 
-/* 
-========================================================== MAIN SECTION
-*/
+/* ========================================================== MAIN SECTION */
 
 
-/* 
-------------------------------------- MAIN > NEW PRODUCT SECTION
-*/
+/* ------------------------------------- MAIN > NEW PRODUCT SECTION */
 
 .new-product {
   padding: 80px 0;
@@ -204,9 +188,8 @@ header h1 {
 .new-product-content { width: calc(75% - 2rem) }
 
 .new-product-content p { margin-bottom: 1rem }
-/* 
-------------------------------------- MAIN > EXHIBITIONS SECTION
-*/
+
+/* ------------------------------------- MAIN > EXHIBITIONS SECTION */
 
 /* TODO center the paintings */
 .exhibitions {
@@ -224,9 +207,8 @@ header h1 {
 }
 
 .exhibitions li:nth-of-type(2n) { margin: 0 3.5rem }
-/* 
-------------------------------------- MAIN > FEATURES SECTION
-*/
+
+/* ------------------------------------- MAIN > FEATURES SECTION */
 
 .features {
   background-color: #FFE9E9;
@@ -244,9 +226,7 @@ header h1 {
   color: #0178A5;
 }
 
-/* 
-------------------------------------- MAIN > BLOG SECTION
-*/
+/* ------------------------------------- MAIN > BLOG SECTION */
 
 .blog { background-color: #F7DAE8 }
 
@@ -271,18 +251,14 @@ header h1 {
 .blog-post { padding-top: 8rem }
 .blog-post p { margin: 1.5rem 0 3rem }
 
-/* 
-------------------------------------- MAIN > CONTACT SECTION
-*/
+/* ------------------------------------- MAIN > CONTACT SECTION */
 
 .contact {
   background-color: #FFE9E9;
   padding: 10rem 0 7rem;
 }
 
-/* 
------------- MAIN > CONTACT > NAV
-*/
+/* ------------ MAIN > CONTACT > NAV */
 
 .contact nav,
 .subscribe,
@@ -307,9 +283,7 @@ header h1 {
   color: #0178A5;
 }
 
-/* 
------------- MAIN > CONTACT > SUBSCRIBE
-*/
+/* ------------ MAIN > CONTACT > SUBSCRIBE */
 
 .subscribe {
   width: 50%;
@@ -334,15 +308,11 @@ header h1 {
 .subscribe input::placeholder { color: #201E21 }
 .subscribe button { width: 25% }
 
-/* 
------------- MAIN > CONTACT > CONTACT DETAILS
-*/
+/* ------------ MAIN > CONTACT > CONTACT DETAILS */
 
 .contact-details { text-align: right }
 
-/* 
-========================================================== FOOTER SECTION
-*/
+/* ========================================================== FOOTER SECTION */
 
 footer {
   text-align: center;
@@ -396,7 +366,7 @@ footer a {
 
 @media (max-width: 768px) {
 
-  /* --------------768px MAIN > NEW-PRODUCT SECTION */
+/* --------------768px MAIN > NEW-PRODUCT SECTION */
   .new-product-img-container,
   .new-product-content {
     width: 100%;
@@ -408,27 +378,25 @@ footer a {
     object-position: top;
   }
 
-  .new-product-content h2 {
-    margin-top: 4rem;
+  .new-product-content { text-align: center }
+
+  .new-product-content h2,
+  .new-product-content p {
+    text-align: left;
   }
 
-  /* TODO Come back and figure out another method of centering the button */
-  .new-product-content .btn { 
-    margin-top: 1rem;
-    margin-left: 50%;
-    transform: translateX(-50%);
-  }
+  .new-product-content h2 { margin-top: 4rem; }
+  .new-product-content .btn { margin-top: 1rem; }
 
-  /* --------------768px MAIN > EXHIBITIONS SECTION */
+/* --------------768px MAIN > EXHIBITIONS SECTION */
   .exhibitions { padding: 5.2rem 0 8rem }
-  .exhibitions li { width: calc((100% - 4rem) / 3); }
 
+  .exhibitions h2 { margin-bottom: 3rem }
+
+  .exhibitions li { width: calc((100% - 4rem) / 3); }
   .exhibitions li:nth-of-type(2n) { margin: 0 2rem }
 
-
-/* 
---------------768px MAIN > BLOG SECTION
-*/
+/* --------------768px MAIN > BLOG SECTION */
 
   .blog {
     text-align: center;
@@ -449,9 +417,8 @@ footer a {
   .blog-container:nth-of-type(even) .blog-post { padding: 4rem 0 }
   
   .blog-post p { margin-bottom: 1.8rem }
-/* 
---------------768px MAIN > CONTACT SECTION
-*/
+
+  /* --------------768px MAIN > CONTACT SECTION */
   .contact { 
     padding: 4rem 0;
     text-align: center;
@@ -489,9 +456,7 @@ footer a {
 
 }
 
-/* 
-------------------------------------------------------- MAX WIDTH: 480PX
-*/
+/* ------------------------------------------------------- MAX WIDTH: 480PX */
 
 @media (max-width: 480px) {
 
@@ -522,6 +487,9 @@ footer a {
   }
 
   .feature-container:not(:last-child) { margin-bottom: 4rem }
+
+  .contact nav li:not(:last-child) { margin-right: 1rem; }
+  .contact a { padding: 1rem; }
 
   .subscribe { margin-bottom: 3rem; }
   .subscribe form > * { float: none; }
