@@ -189,7 +189,7 @@ header {
 .menu-button:checked + .menu { 
   float: none;
   position: fixed; 
-  right: 5%;
+  right: 10%;
 }
 
 header li {
