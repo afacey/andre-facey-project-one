@@ -149,8 +149,8 @@ header {
 .menu-bar {
   background-color: #fff;
   display: inline-block;
-  width: 30px;
-  height:2px;
+  width: 40px;
+  height: 3px;
   position: relative;
 }
 
@@ -180,8 +180,6 @@ header {
 }
 
 .menu-button:checked ~ ul {
-  height: auto;
-  overflow: none;
   padding: 50px 0;
   top: 0;
 }
@@ -422,6 +420,16 @@ footer a {
   .subscribe input { width: 70% }
   .subscribe button { width: 30% }
 
+/* ------------------------------------------------------- MAX WIDTH: 940PX <==> MIN WIDTH: 769PX */
+@media (max-width: 940px) and (min-width: 769px) {
+  header { 
+    background-image: 
+      linear-gradient(rgba(255,255,255, 0.7) 6%, rgba(255,255,255, 0) 20%),
+      url(../assets/group-4@2x.png);
+  }
+}
+  
+
 
 /* ------------------------------------------------------- MAX WIDTH: 768PX */
 
@@ -436,11 +444,8 @@ footer a {
   }
 
   header ul {
-    height: 0;
-    overflow: hidden;
     float: right;
     background-color: #A7059B;
-    position: absolute;
     position: fixed;
     top: -100%;
     left: -0;
