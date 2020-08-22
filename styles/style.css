@@ -96,9 +96,11 @@ h4 {
 
 .wrapper {
   max-width: 1200px;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
+
+/* ------------------------------------- COMPONENTS */
 
 .btn {
   border: 5px solid transparent;
@@ -391,9 +393,7 @@ footer a {
 /* ------------------------------------------------------- MAX WIDTH: 1024PX */
 
 @media (max-width: 1024px) {
-  body {
-    font-size: calc(1.2rem + 0.1vw);
-  }
+  body { font-size: calc(1.2rem + 0.1vw);}
 
   .new-product-img-container {
     width: calc(100% / 3 - 2rem);
@@ -402,12 +402,9 @@ footer a {
 
   .new-product-content { width: calc(100% / 3 * 2 - 2rem) }
 
-
 /* --------------1024px MAIN > BLOG SECTION */
 
-  .blog-post {
-    padding-top: 4rem;
-  }
+  .blog-post { padding-top: 4rem;}
 
   .blog-post p { margin: 1.5rem 0 1rem }
 
@@ -429,8 +426,6 @@ footer a {
   }
 }
   
-
-
 /* ------------------------------------------------------- MAX WIDTH: 768PX */
 
 @media (max-width: 768px) {
@@ -497,6 +492,7 @@ footer a {
   .new-product-content .btn { margin-top: 1rem; }
 
 /* --------------768px MAIN > EXHIBITIONS SECTION */
+
   .exhibitions { padding: 5.2rem 0 8rem }
 
   .exhibitions h2 { margin-bottom: 3rem }
@@ -506,9 +502,7 @@ footer a {
 
 /* --------------768px MAIN > BLOG SECTION */
 
-  .blog {
-    text-align: center;
-  }
+  .blog { text-align: center; }
 
   .blog-post,
   .blog-img-container {
@@ -551,8 +545,6 @@ footer a {
 
   .contact a { padding: 2rem;}
 
-  /* .subscribe h3 { margin: 0 } */
-
   .subscribe form {
     width: 75%;
     margin: 0 auto 2rem;
@@ -562,7 +554,6 @@ footer a {
 
   .contact-details { text-align: center;}
   .contact li:not(:last-child) { margin-bottom: 0 }
-
 
 }
 
@@ -577,16 +568,11 @@ footer a {
 
 /* --------------480px MAIN > EXHIBITIONS SECTION */
 
-  .exhibitions li {
-    width: calc((100% - 2rem) / 2);
-  }
+  .exhibitions li { width: calc((100% - 2rem) / 2);}
 
   .exhibitions li:nth-of-type(2n) { margin: 0 0 0 2rem }
 
-  .exhibitions li:nth-of-type(3) {
-    display: none;
-  }
-
+  .exhibitions li:nth-of-type(3) { display: none; }
 
 /* --------------480px MAIN > FEATURE SECTION */
   .features { padding: 6rem 0 }
@@ -602,9 +588,8 @@ footer a {
   .contact a { padding: 1rem; }
 
   .subscribe { margin-bottom: 3rem; }
-  .subscribe form > * { float: none; }
-
   .subscribe form { width: 100%; }
+  .subscribe form > * { float: none; }
 
   .subscribe input {
     width: 100%;
