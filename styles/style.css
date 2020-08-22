@@ -417,8 +417,8 @@ footer a {
   .subscribe input { width: 70% }
   .subscribe button { width: 30% }
 
-/* ------------------------------------------------------- MAX WIDTH: 940PX <==> MIN WIDTH: 769PX */
-@media (max-width: 940px) and (min-width: 769px) {
+/* ------------------------------------------------------- MAX WIDTH: 1024PX <==> MIN WIDTH: 769PX */
+@media (max-width: 1024px) and (min-width: 769px) {
   header { 
     background-image: 
       linear-gradient(rgba(255,255,255, 0.7) 6%, rgba(255,255,255, 0) 20%),
@@ -426,50 +426,14 @@ footer a {
   }
 }
   
-/* ------------------------------------------------------- MAX WIDTH: 768PX */
-
-@media (max-width: 768px) {
+/* ------------------------------------------------------- MAX WIDTH: 940PX */
+@media (max-width: 940px) {
 
   .btn { font-size: calc(3.6rem + 1vw); }
 
-/* --------------768px MAIN > HEADER SECTION */
-  .menu {
-    display: block;
-    z-index: 10;
-  }
 
-  header ul {
-    float: right;
-    background-color: #A7059B;
-    position: fixed;
-    top: -100%;
-    left: -0;
-    width: 100%;
-    z-index: 5;
-    transition: top .2s ease;
-  }
 
-  header li {
-    float: none;
-    margin: 4rem 2rem;
-    text-align: center;
-  }
-
-  header a {
-    color: #fff;
-    padding: 1.5rem 20%;
-    font-size: 2.2rem;
-  }
-
-  header a:hover,
-  header a:focus {
-    background-color: #fff;
-    color: #A7059B;
-  }
-
-  header a::after { display: none }
-
-/* --------------768px MAIN > NEW-PRODUCT SECTION */
+/* --------------940px MAIN > NEW-PRODUCT SECTION */
   .new-product-img-container,
   .new-product-content {
     width: 100%;
@@ -491,7 +455,7 @@ footer a {
   .new-product-content h2 { margin-top: 4rem; }
   .new-product-content .btn { margin-top: 1rem; }
 
-/* --------------768px MAIN > EXHIBITIONS SECTION */
+/* --------------940px MAIN > EXHIBITIONS SECTION */
 
   .exhibitions { padding: 5.2rem 0 8rem }
 
@@ -500,7 +464,7 @@ footer a {
   .exhibitions li { width: calc((100% - 4rem) / 3); }
   .exhibitions li:nth-of-type(2n) { margin: 0 2rem }
 
-/* --------------768px MAIN > BLOG SECTION */
+/* --------------940px MAIN > BLOG SECTION */
 
   .blog { text-align: center; }
 
@@ -520,7 +484,7 @@ footer a {
   
   .blog-post p { margin-bottom: 1.8rem }
 
-  /* --------------768px MAIN > CONTACT SECTION */
+  /* --------------940px MAIN > CONTACT SECTION */
   .contact { 
     padding: 4rem 0;
     text-align: center;
@@ -557,6 +521,46 @@ footer a {
 
 }
 
+/* ------------------------------------------------------- MAX WIDTH: 768PX */
+
+@media (max-width: 768px) {
+  /* --------------768px MAIN > HEADER SECTION */
+  .menu {
+    display: block;
+    z-index: 10;
+  }
+
+  header ul {
+    float: right;
+    background-color: #A7059B;
+    position: fixed;
+    top: -100%;
+    left: -0;
+    width: 100%;
+    z-index: 5;
+    transition: top .2s ease;
+  }
+
+  header li {
+    float: none;
+    margin: 4rem 2rem;
+    text-align: center;
+  }
+
+  header a {
+    color: #fff;
+    padding: 1.5rem 20%;
+    font-size: 2.2rem;
+  }
+
+  header a:hover,
+  header a:focus {
+    background-color: #fff;
+    color: #A7059B;
+  }
+
+  header a::after { display: none }
+}
 /* ------------------------------------------------------- MAX WIDTH: 480PX */
 
 @media (max-width: 480px) {
