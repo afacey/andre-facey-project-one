@@ -69,12 +69,16 @@ h4 {
   line-height: .55;
 }
 
-h1 { font-size: 12.2rem }
+h1 { 
+  /* font-size: 12.2rem  */
+  font-size: calc(9rem + 2vw);
+}
 
 h2 {
   font-size: 7.5rem;
-  font-size: calc(6.4rem + 1vw);
-  margin-bottom: 1.4rem;
+  /* font-size: calc(6.4rem + 1vw); */
+  font-size: calc(4.4rem + 1vw);
+  /* margin-bottom: 1.4rem; */
   line-height: 56px;
 }
 
@@ -200,6 +204,7 @@ header li {
 header a { 
   padding: 2.5rem;
   position: relative;
+  font-size: 2rem;
 }
 
 header a::after {
@@ -247,8 +252,8 @@ header h1 {
 }
 
 .new-product-content { width: calc(75% - 2rem) }
-
-.new-product-content p { margin-bottom: 1rem }
+.new-product-content h2 { margin-top: -1.5rem }
+.new-product-content p { margin-bottom: 2rem }
 
 /* ------------------------------------- MAIN > EXHIBITIONS SECTION */
 
@@ -389,6 +394,15 @@ footer a {
 
 /* ============================================== MEDIA QUERIES ============================================== */
 
+/* ------------------------------------------------------- MAX WIDTH: 1200PX <==> MIN WIDTH: 769PX */
+@media (max-width: 1200px) and (min-width: 769px) {
+  header { 
+    background-image: 
+      linear-gradient(rgba(255,255,255, 0.7) 6%, rgba(255,255,255, 0) 20%),
+      url(../assets/group-4@2x.png);
+  }
+}
+
 
 /* ------------------------------------------------------- MAX WIDTH: 1024PX */
 
@@ -416,15 +430,6 @@ footer a {
 
   .subscribe input { width: 70% }
   .subscribe button { width: 30% }
-
-/* ------------------------------------------------------- MAX WIDTH: 1024PX <==> MIN WIDTH: 769PX */
-@media (max-width: 1024px) and (min-width: 769px) {
-  header { 
-    background-image: 
-      linear-gradient(rgba(255,255,255, 0.7) 6%, rgba(255,255,255, 0) 20%),
-      url(../assets/group-4@2x.png);
-  }
-}
   
 /* ------------------------------------------------------- MAX WIDTH: 940PX */
 @media (max-width: 940px) {
