@@ -15,12 +15,20 @@
 <body>
 <!-- START of HEADER -->
   <header>
+    <nav class="skip-links">
+      <ul>
+        <li><a href="#main">Skip to main content</a></li>
+        <li><a href="#blog">Skip to blog posts</a></li>
+        <li><a href="#contact">Skip to contact information</a></li>
+      </ul>
+    </nav>
     <div class="wrapper">
-      <nav class="clearfix">
+      <nav class="main-nav clearfix">
         <!-- TODO add hamburger menu -->
-        <input type="checkbox" id="menu" class="menu-button">
-        <label class="menu" for="menu" tabindex="0">
-          <span class="menu-bar"></span>
+        <input type="checkbox" id="menu" class="menu-button visuallyHidden">
+        <label class="menu" for="menu">
+          <span class="menu-bar" aria-hidden=“true”></span>
+          <span class="sr-only">Click here to toggle the navigation menu</span>
         </label>
         
         <ul class="clearfix">
@@ -36,7 +44,7 @@
   </header>
 <!-- END of HEADER -->
 
-  <main>
+  <main id="main">
 <!-- START of NEW-PRODUCT SECTION -->
     <section class="new-product">
       <div class="wrapper clearfix">
@@ -71,17 +79,17 @@
       <div class="wrapper clearfix">
 
         <div class="feature-container">
-          <i class="far fa-images"></i>
+          <i class="far fa-images" aria-hidden=“true”></i>
           <h3>catalogue</h3>
         </div>
   
         <div class="feature-container">
-          <i class="far fa-calendar-alt"></i>
+          <i class="far fa-calendar-alt" aria-hidden=“true”></i>
           <h3>events</h3>
         </div>
   
         <div class="feature-container">
-          <i class="far fa-handshake"></i>
+          <i class="far fa-handshake" aria-hidden=“true”></i>
           <h3>collaborations</h3>
         </div>
 

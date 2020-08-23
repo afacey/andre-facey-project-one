@@ -8,6 +8,8 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
+.visuallyHidden { position: absolute; overflow: hidden; clip: rect(0 0 0 0); height: 1px; width: 1px;  margin: -1px; padding: 0; border: 0; }
+
 /* ======================================================================== ^ END OF NORMALISE */
 
 /* ========================================================== GENERAL STYLES */
@@ -104,6 +106,7 @@ h4 {
 
 /* ------------------------------------- COMPONENTS */
 
+/* ------------------- BUTTONS */
 .btn {
   border: 5px solid transparent;
   padding: 0 1.6rem;
@@ -125,31 +128,7 @@ h4 {
 .btn-blue { background-color: #0178A5 }
 .btn-purple { background-color: #A7059B }
 
-/* ========================================================== HEADER SECTION */
-
-header {
-  background-image: url(../assets/group-4@2x.png);
-  background-size: cover;
-  background-position: top;
-  min-height: 100vh;
-  position: relative;
-  padding-top: 25px;
-}
-
-.menu {
-  float: right;
-  padding: 1rem;
-  display: none;
-  position: relative;
-}
-
-.menu:hover,
-.menu:focus {
-  cursor: pointer;
-}
-
-.menu-button { display: none;}
-
+/* ------------------- COLLAPSED NAV MENU - BARS */
 .menu-bar {
   background-color: #fff;
   display: inline-block;
@@ -183,30 +162,52 @@ header {
   top: 0;
 }
 
-.menu-button:checked ~ ul {
-  padding: 50px 0;
+/* ========================================================== HEADER SECTION */
+
+.skip-links {
+  position: relative;
+}
+
+.skip-links a {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  transform: translateX(-50%);
+  z-index: 100;
+  color: #fff;
+  background-color:#0178A5;
+  padding: 2rem;
+}
+
+.skip-links a:focus {
   top: 0;
+  left: 50%;
 }
 
-.menu-button:checked + .menu { 
-  float: none;
-  position: fixed; 
-  right: 10%;
+
+
+header {
+  background-image: url(../assets/group-4@2x.png);
+  background-size: cover;
+  background-position: top;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 25px;
 }
 
-header li {
+.main-nav li {
   float: left;
   margin-right: 10px;
 }
 
-header a { 
+.main-nav a { 
   padding: 2.5rem;
   position: relative;
   font-size: 2rem;
   font-weight: 500;
 }
 
-header a::after {
+.main-nav a::after {
   content: '';
   display: block;
   position: absolute;
@@ -219,8 +220,8 @@ header a::after {
   opacity: 0;
 }
 
-header a:hover::after,
-header a:focus::after { 
+.main-nav a:hover::after,
+.main-nav a:focus::after { 
   opacity: 1 
 }
 
@@ -228,6 +229,30 @@ header h1 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+
+/* -------------------COLLAPSED NAV MENu */
+
+.menu {
+  float: right;
+  padding: 1rem;
+  display: none;
+  position: relative;
+}
+
+.menu:hover { cursor: pointer; }
+
+.menu-button:focus + .menu { outline: 1px solid rgb(1, 120, 165) }
+
+.menu-button:checked + .menu { 
+  float: none;
+  position: fixed; 
+  right: 10%;
+}
+
+.menu-button:checked ~ ul {
+  padding: 50px 0;
+  top: 0;
 }
 
 /* ========================================================== MAIN SECTION */
@@ -256,7 +281,6 @@ header h1 {
 
 /* ------------------------------------- MAIN > EXHIBITIONS SECTION */
 
-/* TODO center the paintings */
 .exhibitions {
   padding: 8rem 0 10rem;
   background-color: #F7DAE8;
@@ -539,7 +563,7 @@ footer a {
     z-index: 10;
   }
 
-  header ul {
+  .main-nav ul {
     float: right;
     background-color: #0178A5;
     position: fixed;
@@ -550,25 +574,25 @@ footer a {
     transition: top .2s ease;
   }
 
-  header li {
+  .main-nav li {
     float: none;
     margin: 4rem 2rem;
     text-align: center;
   }
 
-  header a {
+  .main-nav a {
     color: #fff;
     padding: 1.5rem 20%;
     font-size: 2.2rem;
   }
 
-  header a:hover,
-  header a:focus {
+  .main-nav a:hover,
+  .main-nav a:focus {
     background-color: #fff;
     color: #0178A5;
   }
 
-  header a::after { display: none }
+  .main-nav a::after { display: none }
 
   .contact form { width: 95% }
 }
