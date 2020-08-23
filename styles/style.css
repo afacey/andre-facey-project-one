@@ -432,8 +432,8 @@ footer a {
 
 /* --------------1024px MAIN > CONTACT SECTION */
 
-  .subscribe input { width: 70% }
-  .subscribe button { width: 30% }
+  .subscribe input { width: 65% }
+  .subscribe button { width: 35% }
   
 /* ------------------------------------------------------- MAX WIDTH: 940PX */
 @media (max-width: 940px) {
