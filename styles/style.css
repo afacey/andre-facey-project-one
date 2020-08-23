@@ -252,7 +252,7 @@ header h1 {
 
 .new-product-content { width: calc(75% - 2rem) }
 .new-product-content h2 { margin-top: -1.5rem }
-.new-product-content p { margin: 1.5rem 0 2rem }
+.new-product-content p { margin: 1.5rem 0 3rem }
 
 /* ------------------------------------- MAIN > EXHIBITIONS SECTION */
 
@@ -424,7 +424,7 @@ footer a {
 
   .blog-post { padding-top: 4rem;}
 
-  .blog-post p { margin: 1.5rem 0 1rem }
+  /* .blog-post p { margin: 1.5rem 0 1rem } */
 
   .blog-container:nth-of-type(odd) .blog-post { padding-right: 4rem }
   .blog-container:nth-of-type(even) .blog-post { padding-left: 4rem }
@@ -491,7 +491,7 @@ footer a {
   .blog-container:nth-of-type(odd) .blog-post,
   .blog-container:nth-of-type(even) .blog-post { padding: 4rem 0 }
   
-  .blog-post p { margin-bottom: 1.8rem }
+  /* .blog-post p { margin-bottom: 1.8rem } */
 
   /* --------------940px MAIN > CONTACT SECTION */
   .contact { 
@@ -579,7 +579,7 @@ footer a {
 
 .btn { 
   /* font-size: calc(3.6rem + 1vw) ; */
-  padding: 0 calc(3rem + .1vw);
+  /* padding: 0 calc(3rem + .1vw); */
 }
 
 /* --------------480px MAIN > EXHIBITIONS SECTION */
