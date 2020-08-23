@@ -210,11 +210,11 @@ header a::after {
   content: '';
   display: block;
   position: absolute;
-  height: 2px;
-  width: 50%;
+  height: 1.8px;
+  width: 60%;
   background-color:#0178A5;
-  top: 70%;
-  left: 25%;
+  top: 72%;
+  left: 20%;
   transition: all .3s ease;
   opacity: 0;
 }
@@ -361,20 +361,21 @@ header h1 {
 .subscribe h3 { margin: -1.5rem 0 2rem }
 .subscribe p { margin: 1rem }
 
+.subscribe form { height: 5rem }
 .subscribe input,
 .subscribe button {
   float: left;
+  height: 100%;
 }
 
 .subscribe input {
   width: 75%;
   border: none;
-  padding: 1.7rem 0 1.7rem 2.8rem;
-  padding: calc(1.7rem + .1vw) 0 calc(1.7rem + .1vw) 2.8rem;
+  padding-left: 2.8rem;
 }
 
 .subscribe input::placeholder { color: #201E21 }
-.subscribe button { width: 25% }
+.subscribe button { width: 25%; }
 
 /* ------------ MAIN > CONTACT > CONTACT DETAILS */
 
@@ -524,8 +525,6 @@ footer a {
     margin: 0 auto 2rem;
   }
 
-  .subscribe input { padding: calc(1.5rem + .1vw) 0 calc(1.5rem + .1vw) 2.8rem }
-
   .contact-details { text-align: center;}
   .contact li:not(:last-child) { margin-bottom: 0 }
 
@@ -606,14 +605,19 @@ footer a {
   .contact nav a { padding: 1rem; }
 
   .subscribe { margin-bottom: 3rem; }
-  .subscribe form { width: 100%; }
+  
+  .subscribe form { 
+    width: 100%;
+    height: auto;
+  }
+
   .subscribe form > * { float: none; }
 
   .subscribe input {
     width: 100%;
     margin-bottom: 1.5rem;
     text-align: center;
-    padding-left: 0;
+    padding: 1.7rem 0;
   }
 
   .subscribe button { width: auto }
