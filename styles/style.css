@@ -40,6 +40,7 @@ h3,
 h4,
 ul,
 p,
+a,
 button {
   margin: 0;
   padding: 0;
@@ -345,8 +346,8 @@ header h1 {
   font-weight: 500;
 }
 
-.contact a:hover,
-.contact a:focus {
+.contact nav a:hover,
+.contact nav a:focus {
   color: #0178A5;
 }
 
@@ -516,7 +517,7 @@ footer a {
     margin-right: 1.3rem; 
   }
 
-  .contact a { padding: 2rem;}
+  .contact nav a { padding: 2rem;}
 
   .subscribe form {
     width: 75%;
@@ -541,7 +542,7 @@ footer a {
 
   header ul {
     float: right;
-    background-color: #A7059B;
+    background-color: #0178A5;
     position: fixed;
     top: -100%;
     left: -0;
@@ -565,7 +566,7 @@ footer a {
   header a:hover,
   header a:focus {
     background-color: #fff;
-    color: #A7059B;
+    color: #0178A5;
   }
 
   header a::after { display: none }
@@ -602,7 +603,7 @@ footer a {
   /* --------------480px MAIN > CONTACT SECTION */
   .contact { font-size: 1.3rem }
   .contact nav li:not(:last-child) { margin-right: .4rem; }
-  .contact a { padding: 1rem; }
+  .contact nav a { padding: 1rem; }
 
   .subscribe { margin-bottom: 3rem; }
   .subscribe form { width: 100%; }
