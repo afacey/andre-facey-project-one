@@ -27,7 +27,7 @@ html { font-size: 62.5% }
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
-  font-size: calc(1.4rem + 0.1vw);
+  /* font-size: calc(1.4rem + 0.1vw); */
   /* font-size: calc(.6rem + 1vw); */
   line-height: 26px;
   letter-spacing: 0.2px;
@@ -79,16 +79,14 @@ h2 {
   /* font-size: calc(6.4rem + 1vw); */
   font-size: calc(4.4rem + 1vw);
   /* margin-bottom: 1.4rem; */
-  line-height: 56px;
+  line-height: 40px;
 }
 
 h3 {
   font-size: 5.5rem;
   /* font-size: calc(5.2rem + .1vw); */
   font-size: calc(3.6rem + 1vw);
-  margin-top: 1rem;
-  line-height: 36px;
-  text-align: center;
+  line-height: 36px; 
 }
 
 h4 {
@@ -253,7 +251,7 @@ header h1 {
 
 .new-product-content { width: calc(75% - 2rem) }
 .new-product-content h2 { margin-top: -1.5rem }
-.new-product-content p { margin-bottom: 2rem }
+.new-product-content p { margin: 1.5rem 0 2rem }
 
 /* ------------------------------------- MAIN > EXHIBITIONS SECTION */
 
@@ -291,6 +289,8 @@ header h1 {
   font-size: 5rem;
   color: #0178A5;
 }
+
+.features h3 { margin-top: 1rem; }
 
 /* ------------------------------------- MAIN > BLOG SECTION */
 
@@ -401,13 +401,15 @@ footer a {
       linear-gradient(rgba(255,255,255, 0.7) 6%, rgba(255,255,255, 0) 20%),
       url(../assets/group-4@2x.png);
   }
+
+  .contact { font-size: 1.3rem }
 }
 
 
 /* ------------------------------------------------------- MAX WIDTH: 1024PX */
 
 @media (max-width: 1024px) {
-  body { font-size: calc(1.2rem + 0.1vw);}
+  /* body { font-size: calc(1.2rem + 0.1vw);} */
 
   .new-product-img-container {
     width: calc(100% / 3 - 2rem);
@@ -434,7 +436,7 @@ footer a {
 /* ------------------------------------------------------- MAX WIDTH: 940PX */
 @media (max-width: 940px) {
 
-  .btn { font-size: calc(3.6rem + 1vw); }
+  .btn { font-size: calc(3rem + .1vw); }
 
 
 
@@ -493,6 +495,7 @@ footer a {
   .contact { 
     padding: 4rem 0;
     text-align: center;
+    font-size: 1.5rem;
   }
 
   .subscribe h3 { margin: 2rem 0 1.5rem }
@@ -509,7 +512,7 @@ footer a {
 
   .contact nav li:not(:last-child) { 
     margin-bottom: 0;
-    margin-right: 2rem; 
+    margin-right: 1.3rem; 
   }
 
   .contact a { padding: 2rem;}
@@ -519,7 +522,7 @@ footer a {
     margin: 0 auto 2rem;
   }
 
-  .subscribe input { padding: calc(1.5rem + 1vw) 0 calc(1.5rem + 1vw) 2.8rem }
+  .subscribe input { padding: calc(1.5rem + .1vw) 0 calc(1.5rem + .1vw) 2.8rem }
 
   .contact-details { text-align: center;}
   .contact li:not(:last-child) { margin-bottom: 0 }
@@ -565,13 +568,15 @@ footer a {
   }
 
   header a::after { display: none }
+
+  contact form { width: 95% }
 }
 /* ------------------------------------------------------- MAX WIDTH: 480PX */
 
 @media (max-width: 480px) {
 
 .btn { 
-  font-size: calc(3.6rem + 1vw) ;
+  /* font-size: calc(3.6rem + 1vw) ; */
   padding: 0 calc(3rem + .1vw);
 }
 
@@ -593,7 +598,9 @@ footer a {
 
   .feature-container:not(:last-child) { margin-bottom: 4rem }
 
-  .contact nav li:not(:last-child) { margin-right: 1rem; }
+  /* --------------480px MAIN > CONTACT SECTION */
+  .contact { font-size: 1.3rem }
+  .contact nav li:not(:last-child) { margin-right: .4rem; }
   .contact a { padding: 1rem; }
 
   .subscribe { margin-bottom: 3rem; }
