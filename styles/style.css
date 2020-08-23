@@ -47,7 +47,6 @@ button {
 
 a {
   color: #201E21;
-  font-weight: 500;
   text-decoration: none;
 }
 
@@ -203,6 +202,7 @@ header a {
   padding: 2.5rem;
   position: relative;
   font-size: 2rem;
+  font-weight: 500;
 }
 
 header a::after {
@@ -339,9 +339,10 @@ header h1 {
 .contact li:not(:last-child) {
   margin-bottom: 1rem;
 }
-.contact a { 
+.contact nav a { 
   transition: color .3s ease;
   /* padding: 1rem; */
+  font-weight: 500;
 }
 
 .contact a:hover,
