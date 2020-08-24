@@ -219,7 +219,7 @@ header h1 {
   transform: translateY(-50%);
 }
 
-/* -------------------COLLAPSED NAV MENu */
+/* -------------------COLLAPSED NAV MENU */
 
 .menu {
   float: right;
@@ -229,19 +229,6 @@ header h1 {
 }
 
 .menu:hover { cursor: pointer; }
-
-.menu-button:focus + .menu { outline: 1px solid rgb(1, 120, 165) }
-
-.menu-button:checked + .menu { 
-  float: none;
-  position: fixed; 
-  right: 10%;
-}
-
-.menu-button:checked ~ ul {
-  padding: 50px 0;
-  top: 0;
-}
 
 /* ========================================================== MAIN SECTION */
 
@@ -413,12 +400,16 @@ footer a {
 
 /* ------------------------------------------------------- MAX WIDTH: 1200PX <==> MIN WIDTH: 769PX */
 @media (max-width: 1200px) and (min-width: 769px) {
+
+  /* --------------1200px <==> 769px HEADER SECTION */
   header { 
+    /* create a white overlay for part of the main nav to be readable over the background */
     background-image: 
       linear-gradient(rgba(255,255,255, 0.7) 6%, rgba(255,255,255, 0) 20%),
       url(../assets/group-4@2x.png);
   }
 
+  /* --------------1200px <==> 769px MAIN > CONTACT SECTION */
   .contact { font-size: 1.2rem }
 }
 
@@ -426,7 +417,7 @@ footer a {
 /* ------------------------------------------------------- MAX WIDTH: 1024PX */
 
 @media (max-width: 1024px) {
-
+/* --------------1024px MAIN > NEW-PRODUCT SECTION */
   .new-product-img-container {
     width: calc(100% / 3 - 2rem);
     margin-right: 4rem;
@@ -516,6 +507,8 @@ footer a {
     width: 100%;
   }
 
+  .contact li:not(:last-child) { margin-bottom: 0 }
+
   .contact nav { margin-bottom: 2rem }
   .contact nav li { display: inline-block }
 
@@ -532,17 +525,30 @@ footer a {
   }
 
   .contact-details { text-align: center;}
-  .contact li:not(:last-child) { margin-bottom: 0 }
-
 }
 
 /* ------------------------------------------------------- MAX WIDTH: 768PX */
 
 @media (max-width: 768px) {
-  /* --------------768px MAIN > HEADER SECTION */
+  /* --------------768px HEADER SECTION */
+
+  /* ------COLLAPSED NAV MENU */
   .menu {
     display: block;
     z-index: 10;
+  }
+
+  .menu-button:focus + .menu { outline: 1px solid rgb(1, 120, 165) }
+
+  .menu-button:checked + .menu { 
+    float: none;
+    position: fixed; 
+    right: 10%;
+  }
+
+  .menu-button:checked ~ ul {
+    padding: 50px 0;
+    top: 0;
   }
 
   .main-nav ul {
@@ -575,6 +581,8 @@ footer a {
   }
 
   .main-nav a::after { display: none }
+
+  /* --------------768px MAIN > CONTACT SECTION */
 
   .contact form { width: 95% }
 }
