@@ -221,11 +221,14 @@ header h1 {
 
 /* -------------------COLLAPSED NAV MENU */
 
+.menu-button { display: none; }
+
 .menu {
   float: right;
   padding: 1rem;
   display: none;
   position: relative;
+  z-index: 10;
 }
 
 .menu:hover { cursor: pointer; }
@@ -533,9 +536,9 @@ footer a {
   /* --------------768px HEADER SECTION */
 
   /* ------COLLAPSED NAV MENU */
-  .menu {
-    display: block;
-    z-index: 10;
+  .menu-button,
+  .menu { 
+    display: block 
   }
 
   .menu-button:focus + .menu { outline: 1px solid rgb(1, 120, 165) }
