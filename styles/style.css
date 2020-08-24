@@ -370,7 +370,10 @@ header h1 {
 }
 
 .subscribe h3 { margin: -1.5rem 0 2rem }
-.subscribe p { margin: 1rem }
+.subscribe label { 
+  margin: 1rem;
+  display: block;
+}
 
 .subscribe form { height: 5rem }
 .subscribe input,
