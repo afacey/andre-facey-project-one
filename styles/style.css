@@ -539,7 +539,8 @@ footer a {
   }
 
   .menu-button:focus + .menu { outline: 1px solid rgb(1, 120, 165) }
-
+  .menu-button:checked:focus + .menu { outline: 1px solid #201E21 }
+  
   .menu-button:checked + .menu { 
     float: none;
     position: fixed; 
