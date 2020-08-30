@@ -94,6 +94,12 @@ h4 {
   margin: 0 auto;
 }
 
+.wrapper-large {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 /* ------------------------------------- COMPONENTS */
 
 /* ------------------- BUTTONS */
