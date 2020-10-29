@@ -1,5 +1,4 @@
-
-# Reading With Caffeine
+# Paint Gallery (PSD Conversion)
 
 !["Paint Gallery project Desktop and Mobile Preview"](https://andrefacey.com/assets/mockups/paintGallery-mockup-lg.png)
 
